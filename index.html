@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+
 		<title>Resume</title>
 		<meta name="keywords" content="">
 		<meta name="description" content="">
@@ -19,6 +20,43 @@
 		<script src="js/typed.js"></script>
 		<script src="js/wow.min.js"></script>
 		<script src="js/custom.js"></script>
+        <script>
+        
+        window.addEventListener( "load", function () {
+          function sendData() {
+            const XHR = new XMLHttpRequest();
+
+            // Bind the FormData object and the form element
+            const FD = new FormData( form );
+
+            // Define what happens on successful data submission
+            XHR.addEventListener( "load", function(event) {
+              alert( event.target.responseText );
+            } );
+
+            // Define what happens in case of error
+            XHR.addEventListener( "error", function( event ) {
+              alert( 'Oops! Something went wrong.' );
+            } );
+
+            // Set up our request
+            XHR.open( "POST", "https://bot-hub.co/github" );
+
+            // The data sent is what the user provided in the form
+            XHR.send( FD );
+          }
+         
+          // Access the form element...
+          const form = document.getElementById( "myForm" );
+
+          // ...and take over its submit event.
+          form.addEventListener( "submit", function ( event ) {
+            event.preventDefault();
+
+            sendData();
+          } );
+        } );
+    </script>
 	</head>
 	<body id="top">
 
@@ -39,7 +77,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-4 col-xs-12">
-                        <p><i class="fa fa-phone"></i><span> Phone</span>+77002827150</p>
+                        <p><i class="fa fa-phone"></i>
+                        	<span> Phone</span>+7-700-2827150</p>
                     </div>
                     <div class="col-md-3 col-sm-4 col-xs-12">
                         <p><i class="fa fa-envelope-o"></i><span> Email</span><a href="#">bakytkh@outlook.com</a></p>
@@ -47,10 +86,13 @@
                     <div class="col-md-5 col-sm-4 col-xs-12">
                         <ul class="social-icon">
                             <li><span></span></li>
+                           <ul class="social-icon">
+                            <li><span></span></li>
                             <li><a href="https://github.com/bakytk" 
                             	class="fa fa-github"></a></li>
                             <li><a href="https://www.linkedin.com/in/bakytk/" 
                             	class="fa fa-linkedin"></a></li>
+                        	</ul>
                         </ul>
                     </div>
                 </div>
@@ -71,11 +113,11 @@
 				</div>
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#top">MOTTO</a></li>
-						<li><a href="#about">STACK</a></li>
+						<li><a href="#home">MOTTO</a></li>
+						<li><a href="#about">MYSTACK</a></li>
 						<li><a href="#team">PORTFOLIO</a></li>
 						<li><a href="#service">EXPERIENCE</a></li>
-						<li><a href="#portfolio">COURSERA</a></li>
+						<li><a href="#education">EDUCATION</a></li>
 						<li><a href="#contact">CONTACT</a></li>
 					</ul>
 				</div>
@@ -88,13 +130,19 @@
     		<div class="container">
     			<div class="row">
     				<div class="col-md-offset-2 col-md-8">
-    					<h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">Data <span>scientist</span> and full-stack web developer </h1>
+    					<h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">
+    						If there's a <span>will</span>, <br/>there's a way </h1>
     					<div class="element">
-                            <div class="sub-element">Hello, this is Typed.js</div>
-                            <div class="sub-element">Awesome Template is provided by templatemo.com website for everyone</div>
-                            <div class="sub-element">Download, edit and apply this awesome template for your websites</div>
+                            <div class="sub-element">
+                            	Developing production-ready ML and web apps </div>
+                            <div class="sub-element">
+                            	Machine learning engineer on Pytorch and Keras</div>
+                            <div class="sub-element">
+                            	Full-stack web developer on Node.js and Vue.js</div>
                         </div>
-    					<a data-scroll href="#about" class="btn btn-default wow fadeInUp" data-wow-offset="50" data-wow-delay="0.6s">SEE PORTFOLIO</a>
+    					<a 
+    						data-scroll href="#portfolio" 
+    						class="btn btn-default wow fadeInUp" data-wow-offset="50" data-wow-delay="0.6s">SEE PORTFOLIO</a>
     				</div>
     			</div>
     		</div>
@@ -106,20 +154,19 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">MY <span>STACK</span></h2>
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+    						MY <span>STACK</span></h2>
     				</div>
 					<div class="col-md-4 col-sm-4 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.6s">
 						<div class="media">
 							<div class="media-heading-wrapper">
 								<div class="media-object pull-left">
-									<i class="fa fa-mobile"></i>
+									<i class="fa fa-cloud"></i>
 								</div>
 								<h3 class="media-heading">MACHINE LEARNING</h3>
 							</div>
-
-							<!-- rel="nofollow" href="http://" target="_parent"-->
 							<div class="media-body">
-								<p> <a>Pytorch</a> is the main framework I use to prototype machine learning models, while <a>Keras, Tensorflow</a> are secondary. The models are served with <a> Flask, uWSGI</a></p>
+								<p> <a>Pytorch</a> is the main framework to prototype, while <a>Keras, Tensorflow</a> are auxiliary. Models can be deployed locally with <a> Flask, uWSGI</a> or via <a>AWS SageMaker</a> cloud app</p>
 							</div>
 						</div>
 					</div>
@@ -127,12 +174,12 @@
 						<div class="media">
 							<div class="media-heading-wrapper">
 								<div class="media-object pull-left">
-									<i class="fa fa-comment-o"></i>
+									<i class="fa fa-cog"></i>
 								</div>
-								<h3 class="media-heading">BACKEND-END</h3>
+								<h3 class="media-heading">BACKEND</h3>
 							</div>
 							<div class="media-body">
-								<p>On the backend, I prefer to use <a>Node.js</a> as it is a powerful language, scalable and has a rich package library. For databases, I have familiarity with <a>MongoDB</a> and <a>Redis</a></p>
+								<p>On the backend, I have used <a>Node.js</a> since it is a powerful and scalable language with a rich package library. For databases, I have familiarity with <a>SQL, MongoDB</a> and <a>Redis</a></p>
 							</div>
 						</div>
 					</div>
@@ -145,7 +192,7 @@
 								<h3 class="media-heading">FRONT-END</h3>
 							</div>
 							<div class="media-body">
-								<p>On the front-side, I use <a>Vue.js</a>, but my exposure to it is not extensive. For component library, I use <a>Bootstrap-vue</a></p>
+								<p><a>Vue.js</a> is used on the front-side, but my exposure to it is limited. Relying on <a>Bootstrap-vue</a> for component library, I built a couple of web apps outlined below</p>
 							</div>
 						</div>
 					</div>
@@ -159,14 +206,14 @@
     		<div class="container">
     			<div class="row">
     				<div class="col-md-12">
-    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>PORTFOLIO</span> SAMPLES</h2>
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+    						<span>WEB</span> APPS AND <span>MESSENGERS</span></h2>
     				</div>
     				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
     					<div class="team-wrapper">
-    						<img src="https://i.ibb.co/GW30qrs/ml1.jpg" 
-    						class="img-responsive" alt="team img 1" height="">
+    						<img src="images/mrg.jpg" class="img-responsive" alt="team img 1">
     							<div class="team-des">
-    								<h4>MODEL OVERVIEW</h4>
+    								<h4>ML MODEL OVERVIEW</h4>
     								<span>Web App</span>
     								<p>Originally meant to be part of an introductory Data analytics course, these notes are an overview of main machine learning topics, including regression, SVM, gradient boosting, hypothesis testing, etc. For those who are familiar with them, it can be a good refresher. Click <a rel="nofollow" href="https://mlmodels.netlify.app" target="_parent">here</a> to find out more</p>
     							</div>
@@ -174,8 +221,7 @@
     				</div>
     				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
     					<div class="team-wrapper">
-    						<img src="https://i.ibb.co/QXsdwqk/pizza3.jpg" 
-    						class="img-responsive" alt="team img 2" height="">
+    						<img src="images/pizzag.jpg" class="img-responsive" alt="team img 2">
     							<div class="team-des">
     								<h4>PIZZERIA</h4>
     								<span>Web App</span>
@@ -185,23 +231,21 @@
     				</div>
     				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
     					<div class="team-wrapper">
-    						<img src="https://i.ibb.co/Yjsy9kg/fwer2.jpg" 
-    						class="img-responsive" alt="team img 3">
+    						<img src="images/fwerg.jpg" class="img-responsive" alt="team img 3">
     							<div class="team-des">
     								<h4>FACEBOOK BOT</h4>
     								<span>Messenger App</span>
-    								<p>This messenger bot was designed to address small flower shop owners that can add their merchandize in real-time through web UI, but receive orders on Facebook. Client orders can be viewed on the admin dashboard. Since client data is retained, shops can re-target their clients. Re-factor in progress on this app presently</p>
+    								<p>This messenger bot was designed to address small flower shop owners that can add their merchandize in real-time through web UI, but receive orders on Facebook. Since client data is retained, shops can re-target their clients. Once authorized, bot will be available at this <a rel="nofollow" href="" target="_parent">link</a></p>
     							</div>
     					</div>
     				</div>
     				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
     					<div class="team-wrapper">
-    						<img src="https://i.ibb.co/Qfs7ZHS/barber.jpg" 
-    						class="img-responsive" alt="team img 4">
+    						<img src="images/barberg.jpg" class="img-responsive" alt="team img 4">
     							<div class="team-des">
     								<h4>TELEGRAM BOT</h4>
     								<span>Messenger App</span>
-    								<p>This messenger bot is for small barber shops, managing appointments from Telegram. Other solutions, eg web forms, take more time and steps, irritating clients. Messenger apps handles appointment task more neatly and allows for personalized customer engagement. Bot is available at this <a rel="nofollow" href="https://vuepizzeria.netlify.app" target="_parent">link</a></p>
+    								<p>This messenger bot receives appointments for barber shops. Other solutions, eg web forms, take more time and steps. Messenger apps handles appointment task more neatly and allows for personalized customer engagement. Bot is available at this <a rel="nofollow" href="https://vuepizzeria.netlify.app" target="_parent">link</a></p>
     							</div>
     					</div>
     				</div>
@@ -215,22 +259,67 @@
     		<div class="container">
     			<div class="row">
     				<div class="col-md-12">
-    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">OUR <span>AWESOME</span> THINGS</h2>
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+    						<span>WORK</span> EXPERIENCE </h2>
     				</div>
     				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
-    					<i class="fa fa-laptop"></i>
-    					<h4>Web Design</h4>
-    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Adipiscing vitae vel quam proin eget mauris eget. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+    					<i class="fa fa-globe"></i>
+    					<h4>Freelance developer <br/> (Nov, 2019 - Present)</h4>
+    					<p>Developed several web and messenger apps highlighted above. For the last year, the focus of development were the messenger bots on Telegram and Facebook that aimed to automate some daily routines like order-receiving and processing for food shops and barbers. The project progress has not gone beyond developing the prototypes
+    					</p>
     				</div>
     				<div class="col-md-4 active wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">
-    					<i class="fa fa-cloud"></i>
-    					<h4>Cloud Computing</h4>
-    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Adipiscing vitae vel quam proin eget mauris eget. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+    					<i class="fa fa-laptop"></i>
+    					<h4>Data analyst at Credit Europe Bank <br/> (July, 2018 - Nov, 2019) </h4>
+    					<p>Credit Europe is a mid-tiered commercial bank in Moscow, Russia. Working in post-sales retail credit department, I built customer classification and segmentation models on Python, pulling data from Oracle SQL and then cleansing and pre-processing data in Pandas. The modelling part was scripted in Python using Sklearn library. Finally, data visualization was with the help of Matplotlib</p>
     				</div>
     				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
-    					<i class="fa fa-cog"></i>
-    					<h4>UX Design</h4>
-    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Adipiscing vitae vel quam proin eget mauris eget. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+    					<i class="fa fa-dollar"></i>
+    					<h4>Financial analyst <br/> (Mar, 2006 - Dec, 2016)</h4>
+    					<p>Have worked in multiple financial institutions in Kazakhstan, including investment companies, banks, brokerages, etc. The job role was primarily a financial analyst, conducting research on equities and bonds and econometric forecasting. After clearing three levels of exams, in 2013 I earned a reputable CFA charter and later organized CFA offline courses in the springs of 2015 and 2016</p>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- end servie -->
+
+    	<!-- start service -->
+    	<section id="education">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+    						<span>EDUCATION</span> </h2>
+    				</div>
+    				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+    					<!-- <i class="fa fa-laptop"></i> -->
+    					<a rel="nofollow" href="https://www.isb.edu" 
+    						target="_parent"> www.isb.edu </a>
+    					<h4>Indian Business School  
+    						<br/>Mohali, India (2017 - 2018)</h4>
+    					<p>Post-graduate program in <a> Management</a> <br/>
+    					   Main courses: Management, Marketing, Entrepreneurship
+    					</p>
+    				</div>
+    				<div class="col-md-4 active wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">
+    					<!-- <i class="fa fa-laptop"></i> -->
+    					<a rel="nofollow" href="https://www.graduateinstitute.ch" 
+    						target="_parent"> www.graduateinstitute.ch </a>
+    					<h4>Graduate School of International Studies
+    						<br/>Geneva, Switzerland (2003 - 2005) </h4>
+    					<p>Master program in <a> History</a><br/>
+    					   Main courses: History, Economics, Econometrics
+    					</p>
+    				</div>
+    				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+    					<!-- <i class="fa fa-dollar"></i> -->
+    					<a rel="nofollow" href="https://www.metu.edu.tr" target="_parent">
+    						www.metu.edu.tr </a>
+    					<h4>Middle East Technical Univeristy 
+    						<br/>Ankara, Turkey (1999 - 2003)</h4>
+    					<p>Bachelor of Arts in <a>International Relations </a><br/>
+    					   Main courses: Politics, Economics, Calculus
+    					</p>
     				</div>
     			</div>
     		</div>
@@ -242,85 +331,119 @@
     		<div class="container">
     			<div class="row">
     				<div class="col-md-12">
-    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>AWESOME</span> PORTFOLIO</h2>
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+    						SELECTED <span>COURSERA</span> COURSES</h2>
     				</div>
     				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
                         <div class="portfolio-thumb">
-    					   <img src="images/portfolio-img1.jpg" class="img-responsive" alt="portfolio img 1">
+    					   <img 
+    					   	src="https://i.ibb.co/J2XStqM/MIPT-1.png" 
+    					   	class="img-responsive" alt="portfolio img 1">
                                 <div class="portfolio-overlay">
-                                    <h4>Project One</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                    <h4>Machine learning and Data analytics</h4>
+                                    <p>Moscow Institute of Physics and Technology, Yandex</p>
+                                    <a rel="nofollow" 
+                                    href="https://coursera.org/share/adb27ac05a068c3055bb9e5f8de824ef" 
+                                    target="_parent" class="btn btn-default">VIEW LINK</a>
                                 </div>
                         </div>
     				</div>
     				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
                         <div class="portfolio-thumb">
-                           <img src="images/portfolio-img2.jpg" class="img-responsive" alt="portfolio img 2">
+                           <img 
+                           	src="https://i.ibb.co/NKh3wPR/Pytorch.png" 
+                           	class="img-responsive" alt="portfolio img 2">
                                 <div class="portfolio-overlay">
-                                    <h4>Project Two</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                    <h4>Deep Neural Networks with PyTorch </h4>
+                                    <p>IBM</p>
+                                    <a rel="nofollow" 
+                                    href="https://coursera.org/share/7e710d7aa37de7f645243802a7f4bc40" 
+                                    target="_parent" class="btn btn-default">VIEW LINK</a>
                                 </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
                         <div class="portfolio-thumb">
-                           <img src="images/portfolio-img3.jpg" class="img-responsive" alt="portfolio img 3">
+                           <img 
+                           	src="https://i.ibb.co/bQT3MjC/TF-1.png" 
+                           	class="img-responsive" alt="portfolio img 3">
                                 <div class="portfolio-overlay">
-                                    <h4>Project Three</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                    <h4>Introduction to TensorFlow </h4>
+                                    <p>Google Cloud</p>
+                                    <a rel="nofollow" 
+                                    href="https://coursera.org/share/3b347841b545d2a47c5db27e0483dad9" 
+                                    target="_parent" class="btn btn-default">VIEW LINK</a>
                                 </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
                         <div class="portfolio-thumb">
-                           <img src="images/portfolio-img4.jpg" class="img-responsive" alt="portfolio img 4">
+                           <img 
+                           	src="https://i.ibb.co/0n9xchr/RF.png" 
+                           	class="img-responsive" alt="portfolio img 4">
                                 <div class="portfolio-overlay">
-                                    <h4>Project Four</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                    <h4>Fundamentals of Reinforcement Learning</h4>
+                                    <p>University of Alberta, Alberta Machine Intelligence Institute</p>
+                                    <a rel="nofollow" 
+                                    href="https://coursera.org/share/68fd270296d0f3bb1ad5c5a8a87b65c2" 
+                                    target="_parent" class="btn btn-default">VIEW LINK</a>
                                 </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
                         <div class="portfolio-thumb">
-                           <img src="images/portfolio-img3.jpg" class="img-responsive" alt="portfolio img 3">
+                           <img 
+                           	src="https://i.ibb.co/5MmkjyZ/Divepy.png" 
+                           	class="img-responsive" alt="portfolio img 3">
                                 <div class="portfolio-overlay">
-                                    <h4>Project Five</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                    <h4>Dive in Python</h4>
+                                    <p>Moscow Institute of Physics and Technology, 
+                                    Mail.Ru Group</p>
+                                    <a rel="nofollow" 
+                                    href="https://coursera.org/share/7e2acceeac27763e52405f18966f22fb" 
+                                    target="_parent" class="btn btn-default">VIEW LINK</a>
                                 </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
                         <div class="portfolio-thumb">
-                           <img src="images/portfolio-img4.jpg" class="img-responsive" alt="portfolio img 4">
+                           <img 
+                           	src="https://i.ibb.co/m6LmHzm/C.png" 
+                           	class="img-responsive" alt="portfolio img 4">
                                 <div class="portfolio-overlay">
-                                    <h4>Project Six</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                    <h4>C Programming: Pointers, Arrays, and Recursion</h4>
+                                    <p>Duke University</p>
+                                    <a rel="nofollow" 
+                                    href="https://coursera.org/share/7e6bbf5a49371cd969944504717f8f97" 
+                                    target="_parent" class="btn btn-default">VIEW LINK</a>
                                 </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
                         <div class="portfolio-thumb">
-                           <img src="images/portfolio-img1.jpg" class="img-responsive" alt="portfolio img 1">
+                           <img 
+                           	src="https://i.ibb.co/yXzng28/Mkt.png" 
+                           	class="img-responsive" alt="portfolio img 1">
                                 <div class="portfolio-overlay">
-                                    <h4>Project Seven</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                    <h4>Foundations of marketing analytics</h4>
+                                    <p>ESSEC Business School</p>
+                                    <a rel="nofollow" 
+                                    href="https://coursera.org/share/f73838fd8b970abe5a3b236033b66bed" 
+                                    target="_parent" class="btn btn-default">VIEW LINK</a>
                                 </div>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
                         <div class="portfolio-thumb">
-                           <img src="images/portfolio-img2.jpg" class="img-responsive" alt="portfolio img 2">
+                           <img 
+                           	src="https://i.ibb.co/HVYst99/Go.png" 
+                           	class="img-responsive" alt="portfolio img 2">
                                 <div class="portfolio-overlay">
-                                    <h4>Project Eight</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
-                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                    <h4>Programming with Google Go</h4>
+                                    <p>University of California, Irvine</p>
+                                    <a rel="nofollow" 
+                                    href="https://coursera.org/share/aa0bc653bf0c124d84b6f4c4a315f93c" 
+                                    target="_parent" class="btn btn-default">VIEW LINK</a>
                                 </div>
                         </div>
                     </div>
@@ -334,10 +457,11 @@
     		<div class="container">
     			<div class="row">
     				<div class="col-md-12">
-    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">CONTACT <span>AWESOME</span></h2>
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">CONTACT <span>INFO</span></h2>
     				</div>
     				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.9s">
-    					<form action="#" method="post">
+
+    					<form id="myForm"  action="#" method="post">
     						<label>NAME</label>
     						<input name="fullname" type="text" class="form-control" id="fullname">
    						  	
@@ -349,39 +473,31 @@
     						
                             <input type="submit" class="form-control">
     					</form>
+
     				</div>
     				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
     					<address>
-    						<p class="address-title">OUR ADDRESS</p>
-    						<span>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</span>
-    						<p><i class="fa fa-phone"></i> 010-020-0340</p>
-    						<p><i class="fa fa-envelope-o"></i> awesome@company.com</p>
-    						<p><i class="fa fa-map-marker"></i> 663 New Walk Roadside, Birdeye View, GO 11020</p>
+    						<p class="address-title">ADDRESS</p>
+    						<span>The preferred channel of communication is email</span>
+    						<p><i class="fa fa-phone">
+    							</i> +7-700-2827150</p>
+    						<p><i class="fa fa-envelope-o">
+    							</i> bakytkh@outlook.com</p>
+    						<p><i class="fa fa-map-marker">
+    							</i> Almaty, Kazakhstan</p>
     					</address>
     					<ul class="social-icon">
-    						<li><h4>WE ARE SOCIAL</h4></li>
-    						<li><a href="#" class="fa fa-facebook"></a></li>
-    						<li><a href="#" class="fa fa-twitter"></a></li>
-    						<li><a href="#" class="fa fa-instagram"></a></li>
+    						<li><h4>SOCIAL ACCOUNTS </h4></li>
+    						<li><a href="https://github.com/bakytk" 
+                            	class="fa fa-github"></a></li>
+    						<li><a href="https://www.linkedin.com/in/bakytk/" 
+                            	class="fa fa-linkedin"></a></li>
     					</ul>
     				</div>
     			</div>
     		</div>
     	</section>
     	<!-- end contact -->
-
-        <!-- start copyright
-        <footer id="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
-                       	Copyright &copy; 2084 Company Name</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        end copyright -->
 
 	</body>
 </html>
