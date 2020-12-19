@@ -205,10 +205,63 @@
 		<!-- start team -->
     	<section id="team">
     		<div class="container">
+
     			<div class="row">
     				<div class="col-md-12">
     					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
     						<span>ML</span> MODELS </h2>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
+    					<div class="team-wrapper">
+    						<img src="images/TSNEg.jpg" class="img-responsive" 
+                                alt="images/rnng.jpg">
+    							<div class="team-des">
+    								<h4>TSNE-HDBSCAN</h4>
+    								<span>Sklearn</span>
+    								<p>To cluster and visualize data, we often need to apply dimension reduction first. PCA can perform poorly when the number of features is large due to <i>curse of dimensionaity </i>effect, so tSNE can be a choice with its non-Euclidean tooling. If cluster patterns are complex k-Means can fail, and procedural techniques like hDBSCAN can perform much better. See this <a rel="nofollow" href="https://github.com/bakytk/Flask-Resnet" target="_parent">repo</a>, where each of these techniques is applied on a toy dataset </p>
+    							</div>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
+    					<div class="team-wrapper">
+    						<img src="images/LSTMg.jpg" class="img-responsive" 
+                                alt="images/rnng.jpg">
+    							<div class="team-des">
+    								<h4>LSTM-SENTIMENT</h4>
+    								<span>Pytorch</span>
+    								<p>In this exercise I tried to productionize LSTM model, which was available from a Github repo <a rel="nofollow" href="https://github.com/agungsantoso/deep-learning-v2-pytorch" target="_parent"> here </a>. Advantage of LSTM vs RNN's is that they capture longer-run effects. After training the model on a Google Colab GPU, I saved the weights and use statically during inference. The app is served with PM2 process manager and can be tested by sending it POST request at the URL, specified in this <a rel="nofollow" href="https://github.com/bakytk/LSTM-sentiment" target="_parent">repo</a> </p>
+
+    							</div>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
+    					<div class="team-wrapper">
+    						<img src="images/SERIESg.jpg" class="img-responsive" 
+                                alt="images/rnng.jpg">
+    							<div class="team-des">
+    								<h4>TIME-SERIES</h4>
+    								<span>Sklearn</span>
+    								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur iste <a rel="nofollow" href="" target="_parent">link</a></p>
+    							</div>
+    					</div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
+    					<div class="team-wrapper">
+    						<img src="images/rnng.jpg" class="img-responsive" 
+                                alt="images/rnng.jpg">
+    							<div class="team-des">
+    								<h4>AWS-SAGEMAKER</h4>
+    								<span>Pytorch </span>
+    								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur iste <a rel="nofollow" href="" target="_parent">link</a></p>
+    							</div>
+    					</div>
+    				</div>
+    			</div>
+
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+    						<span></span> </h2>
     				</div>
     				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
     					<div class="team-wrapper">
@@ -237,7 +290,7 @@
     						<img src="images/fmnistg.jpg" class="img-responsive" 
                                 alt="images/rnng.jpg">
     							<div class="team-des">
-    								<h4>FASHION-MNIST</h4>
+    								<h4>CNN-fMNIST</h4>
     								<span>Pytorch</span>
     								<p>This is an image classification model on Pytorch using a CNN trained on fashion-MNIST image dataset. There are eight layers defined in this CNN architecture, including two sequences of Conv2d, BatchNorm2d, MaxPool2d and a fully-connected layer at the end. The task was an assignment as part of IBM course on <a rel="nofollow" href="https://www.coursera.org/learn/deep-neural-networks-with-pytorch" target="_parent"> Introduction to Pytorch </a> on Coursera. To find out more, check out this <a rel="nofollow" href="https://github.com/bakytk/Fashion" target="_parent">repo</a></p>
     							</div>
@@ -255,56 +308,7 @@
     					</div>
     				</div>
     			</div>
-    			<div class="row">
-    				<div class="col-md-12">
-    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
-    						<span></span> </h2>
-    				</div>
-    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
-    					<div class="team-wrapper">
-    						<img src="images/resnetg.jpg" class="img-responsive" 
-                                alt="images/rnng.jpg">
-    							<div class="team-des">
-    								<h4>HDBSCAN-CLUSTERING</h4>
-    								<span>Sklearn</span>
-    								<p>This is an image classification built on RESNET model on Pytorch. The model is pre-trained using ImageNet dataset. Being based on this <a rel="nofollow" href="https://arxiv.org/abs/1512.03385" target="_parent"> arxiv paper</a>, this network uses additional blocks that are generated skipping some layers of base network. The code is taken from official Pytorch tutorials, while my minor contribution was to deploy it on own dev-server using Flask/uWSGI. To find out more, check out this <a rel="nofollow" href="https://github.com/bakytk/Flask-Resnet" target="_parent">repo</a></p>
-    							</div>
-    					</div>
-    				</div>
-    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
-    					<div class="team-wrapper">
-    						<img src="images/LSTMg.jpg" class="img-responsive" 
-                                alt="images/mrg.jpg">
-    							<div class="team-des">
-    								<h4>LSTM-SENTIMENT</h4>
-    								<span>Pytorch</span>
-    								<p>In this exercise I tried to productionize LSTM model, which was available from a Github repo <a rel="nofollow" href="https://github.com/agungsantoso/deep-learning-v2-pytorch" target="_parent"> here </a>. After training the mode on Googe Coab GPU, I saved the weights and used them staticay during inference. The app can be tested by sending it POST request at the URL, specified in this <a rel="nofollow" href="https://github.com/bakytk/LSTM-sentiment" target="_parent">repo</a> </p>
-    							</div>
-    					</div>
-    				</div>
-    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
-    					<div class="team-wrapper">
-    						<img src="images/fmnistg.jpg" class="img-responsive" 
-                                alt="images/rnng.jpg">
-    							<div class="team-des">
-    								<h4>FASHION-MNIST</h4>
-    								<span>Pytorch</span>
-    								<p>This is an image classification model on Pytorch using a CNN trained on fashion-MNIST image dataset. There are eight layers defined in this CNN architecture, including two sequences of Conv2d, BatchNorm2d, MaxPool2d and a fully-connected layer at the end. The task was an assignment as part of IBM course on <a rel="nofollow" href="https://www.coursera.org/learn/deep-neural-networks-with-pytorch" target="_parent"> Introduction to Pytorch </a> on Coursera. To find out more, check out this <a rel="nofollow" href="https://github.com/bakytk/Fashion" target="_parent">repo</a></p>
-    							</div>
-    					</div>
-    				</div>
-    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.6s">
-    					<div class="team-wrapper">
-    						<img src="images/rnng.jpg" class="img-responsive" 
-                                alt="images/rnng.jpg">
-    							<div class="team-des">
-    								<h4>RNN-CLASSIFICATION</h4>
-    								<span>Pytorch </span>
-    								<p>This is an character-level RNN on Pytorch, which is trained on a corpus of names from 18 languages and tries to predict which languages the name comes from. The code for model was taken from this Pytorch  <a rel="nofollow" href="https://pytorch.org/tutorials/intermediate/char_rnn_classification_tutorial.html" target="_parent"> official tutorials </a>. RNNs are powerful models that capture the sequence or order-of-flow effect in data. To find out more, check out this <a rel="nofollow" href="https://github.com/bakytk/Name-guesser" target="_parent">repo</a></p></p>
-    							</div>
-    					</div>
-    				</div>
-    			</div>
+    			
     		</div>
     	</section>
     	<!-- end team -->
